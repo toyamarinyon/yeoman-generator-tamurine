@@ -1,0 +1,23 @@
+{
+	"name": "<%= _.slugify(appName) %>",
+		"version": "0.0.0",
+		"description": "<%= appDescription%>",
+		"main": "Gruntfile.coffee",
+		"scripts": {
+			"test": "echo \"Error: no test specified\" && exit 1"
+		},
+		"repository": {
+			"type": "git",
+			"url": "git://github.com/<%= githubUser %>/<%= _.slugify(appName) %>.git"
+		 },
+		"author": "toyamarinyon",
+		"license": "BSD",
+		"devDependencies": {
+			"grunt": "*", 
+			"grunt-contrib-watch": "*",
+			"grunt-contrib-compass": "*",
+			"grunt-slim": "*",
+			"grunt-contrib-coffee": "*",
+			"grunt-contrib-cssmin": "*"
+		}
+}
