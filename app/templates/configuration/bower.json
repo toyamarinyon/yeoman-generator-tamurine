@@ -5,6 +5,7 @@
         "requirejs": "latest",
         "jquery": "latest",
         "backbone-amd": "latest",
-        "underscore-amd" : "master"
+        "underscore-amd" : "master",
+        "font-awesome" : "master"
     }
 }

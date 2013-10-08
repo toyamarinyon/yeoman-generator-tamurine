@@ -72,9 +72,34 @@ TamurineGenerator.prototype.userInfo = function userInfo() {
   }.bind(this));
 };
 
-TamurineGenerator.prototype.app = function app() {
-  this.mkdir('app');
-  this.mkdir('app/templates');
-
+TamurineGenerator.prototype.configuration = function app() {
   this.template('configuration/package.json', 'package.json');
+  this.template('configuration/bower.json', 'bower.json');
+  this.copy('configuration/.bowerrc', '.bowerrc');
+  this.copy('configuration/Gemfile', 'Gemfile');
+};
+
+TamurineGenerator.prototype.assets = function app() {
+  this.mkdir('assets');
+  this.mkdir('assets/sass');
+  this.mkdir('assets/css');
+  this.mkdir('assets/css/build');
+  this.mkdir('assets/coffee');
+  this.mkdir('assets/js');
+  this.copy('application/coffee/application.coffee', 'assets/coffee/application.coffee');
+  this.copy('application/coffee/require_config.coffee', 'assets/coffee/require_config.coffee');
+  this.copy('application/sass/application.sass', 'assets/sass/application.sass');
+};
+
+TamurineGenerator.prototype.views = function app() {
+  this.mkdir('views');
+  this.template('application/views/index.slim', 'views/index.slim');
+  this.template('application/views/layout.slim','views/layout.slim');
+  this.copy('application/Procfile', 'Procfile');
+};
+
+TamurineGenerator.prototype.application = function app() {
+  this.copy('application/app.rb', 'app.rb');
+  this.copy('application/Gruntfile.coffee', 'Gruntfile.coffee');
+  this.copy('application/Procfile', 'Procfile');
 };

@@ -1,0 +1,14 @@
+doctype 5
+html lang="ja"
+  head
+    meta charset="UTF-8"
+    title <%= _.slugify(appName) %>
+    link rel="stylesheet" href="/css/application.min.css"
+    link rel="stylesheet" href="/vendor/bower/font-awesome/css/font-awesome.min.css"
+  body
+    #page-set
+      .container
+
+        == yield
+    
+    script src="/vendor/bower/requirejs/require.js" data-main="js/application"

@@ -10,7 +10,7 @@
 			"type": "git",
 			"url": "git://github.com/<%= githubUser %>/<%= _.slugify(appName) %>.git"
 		 },
-		"author": "toyamarinyon",
+		"author": "<%= githubUser %>",
 		"license": "BSD",
 		"devDependencies": {
 			"grunt": "*", 
