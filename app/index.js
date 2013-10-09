@@ -76,6 +76,7 @@ TamurineGenerator.prototype.configuration = function app() {
   this.template('configuration/package.json', 'package.json');
   this.template('configuration/bower.json', 'bower.json');
   this.copy('configuration/.bowerrc', '.bowerrc');
+  this.copy('configuration/config.rb', 'config.rb');
   this.copy('configuration/Gemfile', 'Gemfile');
 };
 
@@ -86,9 +87,9 @@ TamurineGenerator.prototype.assets = function app() {
   this.mkdir('assets/css/build');
   this.mkdir('assets/coffee');
   this.mkdir('assets/js');
-  this.copy('application/coffee/application.coffee', 'assets/coffee/application.coffee');
-  this.copy('application/coffee/require_config.coffee', 'assets/coffee/require_config.coffee');
-  this.copy('application/sass/application.sass', 'assets/sass/application.sass');
+  this.copy('application/assets/coffee/application.coffee', 'assets/coffee/application.coffee');
+  this.copy('application/assets/coffee/require_config.coffee', 'assets/coffee/require_config.coffee');
+  this.copy('application/assets/sass/application.sass', 'assets/sass/application.sass');
 };
 
 TamurineGenerator.prototype.views = function app() {

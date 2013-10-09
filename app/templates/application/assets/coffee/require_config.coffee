@@ -1,5 +1,5 @@
 require.config
   paths:
-    jquery: 'vendor/jquery/jquery'
-    underscore: 'vendor/underscore-amd/underscore'
-    backbone: 'vendor/backbone-amd/backbone'
+    jquery: '/vendor/bower/jquery/jquery'
+    underscore: '/vendor/bower/underscore-amd/underscore'
+    backbone: '/vendor/bower/backbone-amd/backbone'
