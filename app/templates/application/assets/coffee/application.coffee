@@ -1,3 +1,3 @@
 require ['jquery'], ($) ->
   $ ->
-    console.log 'test'
+    console.log 'hello!'
