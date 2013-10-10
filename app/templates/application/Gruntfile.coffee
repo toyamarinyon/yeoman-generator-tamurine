@@ -47,6 +47,7 @@ module.exports = (grunt) ->
 
   grunt.registerTask 'default', [
     'compass',
+    'cssmin',
     'coffee',
     'watch'
   ]
