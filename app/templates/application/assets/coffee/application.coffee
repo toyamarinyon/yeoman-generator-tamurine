@@ -1,3 +1,5 @@
-require ['jquery'], ($) ->
+require ['jquery','backbone','underscore'], ($,b,_) ->
   $ ->
-    console.log 'hello!'
+    console.log $
+    console.log b
+    console.log _

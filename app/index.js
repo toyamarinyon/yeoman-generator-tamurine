@@ -90,6 +90,8 @@ TamurineGenerator.prototype.assets = function app() {
   this.copy('application/assets/coffee/application.coffee', 'assets/coffee/application.coffee');
   this.copy('application/assets/coffee/require_config.coffee', 'assets/coffee/require_config.coffee');
   this.copy('application/assets/sass/application.sass', 'assets/sass/application.sass');
+  this.copy('application/assets/sass/const/variables.sass', 'assets/sass/const/variables.sass');
+  this.copy('application/assets/sass/lib/_zurui.sass', 'assets/sass/lib/_zurui.sass');
 };
 
 TamurineGenerator.prototype.views = function app() {
