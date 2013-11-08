@@ -3,7 +3,7 @@ html lang="ja"
   head
     meta charset="UTF-8"
     title <%= _.slugify(appName) %>
-    link rel="stylesheet" href="/css/application.min.css"
+    link rel="stylesheet" href="/application.css"
     link rel="stylesheet" href="/vendor/bower/font-awesome/css/font-awesome.min.css"
   body
     #page-set
@@ -11,4 +11,4 @@ html lang="ja"
         h1.title Tamurine Boilerplate
       .page-contents.grid-system
         == yield
-    script src="/vendor/bower/requirejs/require.js" data-main="js/application"
+    script src="/vendor/bower/requirejs/require.js" data-main="/application"

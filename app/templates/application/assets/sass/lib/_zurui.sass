@@ -1,18 +1,67 @@
 @import compass
-@mixin line-top ($black:.1,  $white:.5)
-  border-top: 1px solid rgba(0, 0, 0, $black)
-  @include box-shadow(rgba(255, 255, 255, $white) 0 1px 0 inset)
-@mixin line-right ($black:.1,  $white:.5)
-  border-right: 1px solid rgba(0, 0, 0, $black)
-  @include box-shadow(rgba(255, 255, 255, $white) -1px 0 0 inset)
-@mixin line-bottom ($black:.1,  $white:.5)
-  border-bottom: 1px solid rgba(0, 0, 0, $black)
-  @include box-shadow(rgba(255, 255, 255, $white) 0 1px 0)
-@mixin line-left ($black:.1,  $white:.5)
-  border-left: 1px solid rgba(0, 0, 0, $black)
-  @include box-shadow(rgba(255, 255, 255, $white) -1px 0 0)
+// zurui line
+=line-top ($black:.1,  $white:.5)
+ border-top: 1px solid rgba(0, 0, 0, $black)
+ +box-shadow(rgba(255, 255, 255, $white) 0 1px 0 inset)
+=line-right ($black:.1,  $white:.5)
+ border-right: 1px solid rgba(0, 0, 0, $black)
+ +box-shadow(rgba(255, 255, 255, $white) -1px 0 0 inset)
+=line-bottom ($black:.1,  $white:.5)
+ border-bottom: 1px solid rgba(0, 0, 0, $black)
+ +box-shadow(rgba(255, 255, 255, $white) 0 1px 0)
+=line-left ($black:.1,  $white:.5)
+ border-left: 1px solid rgba(0, 0, 0, $black)
+ +box-shadow(rgba(255, 255, 255, $white) -1px 0 0)
 
-@mixin gradient-top-lighten ($color : #666, $lighten: 5%)
-  background-color: $color
-  @include filter-gradient(lighten($color, $lighten), $color,vertical)
-  @include background-image(linear-gradient(lighten($color,$lighten) 0%, $color 100%))
+// zurui gradient
+=gradient-top-lighten ($color : #666, $lighten: 5%)
+ background-color: $color
+ +filter-gradient(lighten($color, $lighten), $color,vertical)
+ +background-image(linear-gradient(lighten($color,$lighten) 0%, $color 100%))
+
+// zurui boxshadow
+=line-shadow-box ($shadow: 0.15)
+ +box-shadow(rgba(0, 0, 0, $shadow) 0 0 2px)
+=rich-box ($shadow: 0.15)
+ +box-shadow(rgba(0, 0, 0, $shadow) 0 0 0 20px inset)
+=deboss-box ($border: .1, $shadow: 0.5, $highlight: .8)
+ border: 1px solid rgba(0, 0, 0, $border)
+ +box-shadow(rgba(0, 0, 0, $shadow) -1px 1px 2px inset, rgba(255, 255, 255, $highlight) -1px 1px 0)
+=emboss-box ($border: .1, $shadow: 0.5, $highlight: .8)
+ border: 1px solid rgba(0, 0, 0, $border)
+ +box-shadow(rgba(0, 0, 0, $shadow) -1px 1px 0, rgba(255, 255, 255, $highlight) -1px 1px 0 inset)
+
+// zurui button
+=button($color: #48B1F2, $font-size: 16px, $text-color: white)
+ display: inline-block
+ background-origin: border-box
+ position: relative
+ font-weight: bold
+ +ts-000(.1)
+ +gradient-top-lighten($color, 5%)
+ +border-radius(4px)
+ +emboss-box($border: .1, $shadow: .1, $highlight: .2) 
+ color: rgba($text-color, .9)
+ text-align: center
+ font-size: $font-size
+ padding: 0 ($font-size * 2)
+ height: $font-size * 3
+ line-height: $font-size * 3
+ i
+  font-size: 130%
+  margin-right: 5px
+  color: rgba($text-color, .5)
+ &:hover
+  +gradient-top-lighten(lighten($color, 5%), 5%)
+  text-decoration: none
+  color: $text-color
+  i
+   color: $text-color
+ &:active
+  +gradient-top-lighten($color, 5%)
+  top: 1px
+
+// zurui numbers
+=num-font
+ font-family: Arial, Helvetica,sans-serif
+ font-weight: bold

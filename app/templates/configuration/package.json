@@ -1,6 +1,6 @@
 {
 	"name": "<%= _.slugify(appName) %>",
-		"version": "0.0.0",
+		"version": "0.0.4",
 		"description": "<%= appDescription%>",
 		"main": "Gruntfile.coffee",
 		"scripts": {
@@ -13,11 +13,8 @@
 		"author": "<%= githubUser %>",
 		"license": "BSD",
 		"devDependencies": {
+			"github": "*",
 			"grunt": "*", 
-			"grunt-contrib-watch": "*",
-			"grunt-contrib-compass": "*",
-			"grunt-slim": "*",
-			"grunt-contrib-coffee": "*",
-			"grunt-contrib-cssmin": "*"
+			"grunt-contrib-watch": "*"
 		}
 }

@@ -1,6 +1,6 @@
 {
     "name": "<%= _.slugify(appName) %>",
-    "version": "0.0.0",
+    "version": "0.0.4",
     "dependencies": {
         "requirejs": "latest",
         "jquery": "latest",

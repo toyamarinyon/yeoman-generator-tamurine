@@ -1,14 +1,9 @@
 source 'https://rubygems.org'
 
-# process manager
 gem 'foreman'
-
-# application server
 gem 'sinatra'
-
-# template engine
+gem 'sinatra-contrib'
 gem 'slim'
-
-# css framework
+gem 'sass'
 gem 'compass'
-gem 'compass-960-plugin'
+gem 'coffee-script'

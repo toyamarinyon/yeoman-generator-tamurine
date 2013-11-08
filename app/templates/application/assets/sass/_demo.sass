@@ -1,0 +1,33 @@
+body
+ margin: 0px
+ font-family: "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif
+ background: #fff
+
+.page-header
+ @include line-bottom
+ background: url("/image/light_noise_diagonal.png")
+ color: #3498db
+ margin-bottom: $margin_size * 3.0
+ padding-bottom: 14px
+ padding-top: 80px
+ text-align: center
+
+.article
+ color: $key_color
+ margin-bottom: $margin_size * 2.4
+ .header
+  font-size: 1.4em
+  font-weight: 300
+  margin-bottom: $margin_size
+ .body
+  @include border-radius(4px)
+  background: rgba(218,219,223,0.175)
+  line-height: 2.0em
+  padding: 10px
+  border: 1px solid #ebebeb
+
+.title
+ font-size: 48px
+ font-family: "source-sans-pro","Helvetica Neue",Helvetica,Arial,sans-serif
+ display: inline-block
+ letter-spacing: .038em
